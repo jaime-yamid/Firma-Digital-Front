@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./input-text.component.css']
 })
 export class InputTextComponent {
+  value:string=""
 
 }
