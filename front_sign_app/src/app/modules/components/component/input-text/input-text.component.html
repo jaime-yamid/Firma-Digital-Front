@@ -1,1 +1,1 @@
-<input type="text" (ngModel)="value" name="value" id="value" class="rounded-md px-2 py-1 outline-none">
+<input type="text" (input)="onInputChange()" (ngModel)="value" [placeholder]="placeholder" name="value" id="value" class="rounded-md px-2 py-1 outline-none">
