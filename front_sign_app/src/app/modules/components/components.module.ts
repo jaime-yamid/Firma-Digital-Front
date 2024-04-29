@@ -4,15 +4,15 @@ import { ButtonComponent } from './component/button/button.component';
 import { InputTextComponent } from './component/input-text/input-text.component';
 import { CheckBoxComponent } from './component/check-box/check-box.component';
 import { CardsComponent } from './component/cards/cards.component';
-
-
+import { SideBarComponent } from './component/side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
     ButtonComponent,
     InputTextComponent,
     CheckBoxComponent,
-    CardsComponent
+    CardsComponent,
+    SideBarComponent
   ],
   imports: [
     CommonModule
@@ -21,6 +21,8 @@ import { CardsComponent } from './component/cards/cards.component';
     ButtonComponent,
     InputTextComponent,
     CheckBoxComponent,
-    CardsComponent],
+    CardsComponent,
+    SideBarComponent
+  ],
 })
 export class ComponentsModule { }

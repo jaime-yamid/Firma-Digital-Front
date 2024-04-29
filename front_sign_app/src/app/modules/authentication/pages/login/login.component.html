@@ -13,13 +13,10 @@
       <form>
         <div class="mb-4">
           <app-input-text [Label]="'Correo electronico'" [placeholder]="'****@correo.com'" [type]="'email'"></app-input-text>
-          <!-- <label class="text-sm" for="username">Correo electronico</label>
-          <input class="py-1 px-3 w-full rounded-lg outline-none bg-gray-600 text-opacity-55" type="text" id="username"> -->
         </div>
 
         <div class="mb-4">
-          <label class="text-sm" for="password">Contraseña</label>
-          <input class="py-1 px-3 w-full rounded-lg outline-none  bg-gray-600 text-opacity-55" type="password" id="password">
+          <app-input-text [Label]="'Contraseña'" [placeholder]="'******'" [type]="'password'"></app-input-text>
           <a href="" class="text-xs"><span class="text-white text-opacity-70 hover:text-opacity-95">Olvidaste la contraseña?</span></a>
         </div>
         <div class="mb-4">
