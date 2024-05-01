@@ -5,6 +5,7 @@ import { InputTextComponent } from './component/input-text/input-text.component'
 import { CheckBoxComponent } from './component/check-box/check-box.component';
 import { CardsComponent } from './component/cards/cards.component';
 import { SideBarComponent } from './component/side-bar/side-bar.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SideBarComponent } from './component/side-bar/side-bar.component';
     SideBarComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
   exports:[
     ButtonComponent,

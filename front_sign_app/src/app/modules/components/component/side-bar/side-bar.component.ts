@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from "@angular/router";
+import { Router,ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-side-bar',
@@ -7,5 +7,12 @@ import { Router } from "@angular/router";
   styleUrls: ['./side-bar.component.css']
 })
 export class SideBarComponent {
+  constructor(private _Activatedroute:ActivatedRoute,
+    private _router:Router){
+}
+  hiddensidebar_ = false
 
+  hideShow(){
+    this.hiddensidebar_ = !this.hiddensidebar_
+  }
 }
