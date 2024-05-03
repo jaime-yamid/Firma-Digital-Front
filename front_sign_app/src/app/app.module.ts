@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AuthenticationModule } from './modules/authentication/authentication.module';
 import { HomeUserModule } from './modules/home-user/home-user.module';
 import { ComponentsModule } from './modules/components/components.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,6 +16,8 @@ import { ComponentsModule } from './modules/components/components.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
     AuthenticationModule,
     ComponentsModule,
     HomeUserModule,

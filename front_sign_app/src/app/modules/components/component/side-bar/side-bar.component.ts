@@ -10,7 +10,7 @@ export class SideBarComponent {
   constructor(private _Activatedroute:ActivatedRoute,
     private _router:Router){
 }
-  hiddensidebar_ = false
+  hiddensidebar_ = true
 
   hideShow(){
     this.hiddensidebar_ = !this.hiddensidebar_

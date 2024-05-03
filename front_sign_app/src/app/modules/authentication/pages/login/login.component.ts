@@ -1,16 +1,30 @@
 import { Component } from '@angular/core';
-import { FormBuilder , FormGroup } from "@angular/forms";
+import { FormBuilder, FormGroup, FormControl, Validators, } from '@angular/forms';
+import { Router,ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  inputValueFromChild: string = '';
-  onchangeEmail(value: string) {
-    this.inputValueFromChild = value;
+
+  formLogin: FormGroup;
+  userFormControl: FormControl;
+
+  constructor(
+    private fb: FormBuilder,
+    private _Activatedroute:ActivatedRoute,
+    private _router:Router) {
+    this.formLogin = this.fb.group({
+      user: ['',[Validators.required,Validators.email]],
+      pass: ['',[Validators.required,Validators.minLength(5)]]
+    });
   }
-  onchangePass(value: string) {
-    this.inputValueFromChild = value;
+
+  onSubmit() {
+    const userValue = this.formLogin.get('user').value;
+    const passwordValue = this.formLogin.get('pass').value;
+    console.log('Usuario:', userValue);
+    console.log('Contraseña:', passwordValue);
   }
 }

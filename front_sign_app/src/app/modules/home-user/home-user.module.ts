@@ -5,6 +5,7 @@ import { ComponentsModule } from '../components/components.module';
 import { SignDocumentComponent } from './pages/sign-document/sign-document.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -14,7 +15,9 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
   imports: [
     CommonModule,
     ComponentsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class HomeUserModule { }

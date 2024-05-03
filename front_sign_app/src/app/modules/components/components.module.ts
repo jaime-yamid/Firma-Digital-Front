@@ -6,6 +6,8 @@ import { CheckBoxComponent } from './component/check-box/check-box.component';
 import { CardsComponent } from './component/cards/cards.component';
 import { SideBarComponent } from './component/side-bar/side-bar.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InputFileComponent } from './component/input-file/input-file.component';
 
 @NgModule({
   declarations: [
@@ -13,18 +15,22 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
     InputTextComponent,
     CheckBoxComponent,
     CardsComponent,
-    SideBarComponent
+    SideBarComponent,
+    InputFileComponent
   ],
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports:[
     ButtonComponent,
     InputTextComponent,
     CheckBoxComponent,
     CardsComponent,
-    SideBarComponent
+    SideBarComponent,
+    InputFileComponent
   ],
 })
 export class ComponentsModule { }
