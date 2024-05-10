@@ -7,6 +7,7 @@ import { AuthenticationModule } from './modules/authentication/authentication.mo
 import { HomeUserModule } from './modules/home-user/home-user.module';
 import { ComponentsModule } from './modules/components/components.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AuthenticationModule,
     ComponentsModule,
     HomeUserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

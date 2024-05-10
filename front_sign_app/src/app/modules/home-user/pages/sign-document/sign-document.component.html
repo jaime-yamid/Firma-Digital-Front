@@ -12,13 +12,14 @@
         </div>
       </div>
       <div class="flex flex-col gap-3 w-full items-center text-white">
-        <form [formGroup]="signForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="signForm">
           <div class="mb-4">
             <app-input-file formControlName="file" [Label]="'Cargar archivos'"></app-input-file>
+            <input type="file" (change)="fileChange($event)" placeholder="Upload file">
             <!-- <app-input-text formControlName="user" [Label]="'Correo electronico'" [placeholder]="'****@correo.com'" [type]="'email'"></app-input-text> -->
           </div>
           <div class="mb-4">
-           <app-button [buttonControl]="signForm" (click)="onSubmit()">Ingresar</app-button>
+           <app-button [buttonControl]="signForm" (click)="onSubmit()" >Ingresar</app-button>
             <!-- <button class="bg-blue-600 text-white px-4 py-2 rounded-2xl font-normal w-full hover:bg-blue-500">Ingresar</button> -->
           </div>
           <div class="flex flex-row w-full justify-between">
