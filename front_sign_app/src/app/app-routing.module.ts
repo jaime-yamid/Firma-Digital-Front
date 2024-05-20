@@ -7,6 +7,7 @@ import { HomeComponent } from './modules/home-user/pages/home/home.component';
 import { SignDocumentComponent } from './modules/home-user/pages/sign-document/sign-document.component';
 import { DashboardComponent } from './modules/home-user/pages/dashboard/dashboard.component';
 import { ManagementDocumentsComponent } from './modules/home-user/pages/management-documents/management-documents.component';
+import { SettingComponent } from './modules/home-user/pages/setting/setting.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
     {path: "dashboard", component: DashboardComponent},
     {path: "sign-document", component: SignDocumentComponent},
     {path: "management-document", component: ManagementDocumentsComponent},
+    {path: "settings", component: SettingComponent},
     { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
   ]
   },

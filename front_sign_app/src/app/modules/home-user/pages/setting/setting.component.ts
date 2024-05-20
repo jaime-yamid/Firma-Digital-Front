@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class SettingComponent {
 
+  user:string = "juanrojas"
+  keyPublic:string = "aaaaaaaaaaaaaaaaaaaaaaaaatttttttttttttttusyaisndiansdaasdasndjandjnas"
 }
