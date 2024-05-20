@@ -6,11 +6,15 @@ import { SignDocumentComponent } from './pages/sign-document/sign-document.compo
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ManagementDocumentsComponent } from './pages/management-documents/management-documents.component';
+import { SettingComponent } from './pages/setting/setting.component';
 @NgModule({
   declarations: [
     HomeComponent,
     SignDocumentComponent,
-    DashboardComponent
+    DashboardComponent,
+    ManagementDocumentsComponent,
+    SettingComponent
   ],
   imports: [
     CommonModule,

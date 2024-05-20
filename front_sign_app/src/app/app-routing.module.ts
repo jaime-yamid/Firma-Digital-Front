@@ -6,6 +6,7 @@ import { HomeComponent } from './modules/home-user/pages/home/home.component';
 //SIGN
 import { SignDocumentComponent } from './modules/home-user/pages/sign-document/sign-document.component';
 import { DashboardComponent } from './modules/home-user/pages/dashboard/dashboard.component';
+import { ManagementDocumentsComponent } from './modules/home-user/pages/management-documents/management-documents.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   children: [
     {path: "dashboard", component: DashboardComponent},
     {path: "sign-document", component: SignDocumentComponent},
+    {path: "management-document", component: ManagementDocumentsComponent},
     { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
   ]
   },

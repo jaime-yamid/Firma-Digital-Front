@@ -1,37 +1,37 @@
 
-<aside class="w-max h-screen bg-[#333842] flex flex-col gap-4 items-start py-6 px-4">
+<aside class="w-max h-screen bg-tuna-800 flex flex-col gap-4 items-start py-6 px-4">
   <div class="flex flex-row gap-4 items-center" >
-    <button class="rounded-full p-2 hover:bg-gray-500" (click)=" hiddensidebar_ = !hiddensidebar_">
+    <button class="rounded-full p-2 hover:bg-tuna-600" (click)=" hiddensidebar_ = !hiddensidebar_">
       <svg width="24" height="24" viewBox="0 0 512 512"><path d="M417.4 224H94.6C77.7 224 64 238.3 64 256s13.7 32 30.6 32h322.8c16.9 0 30.6-14.3 30.6-32s-13.7-32-30.6-32z" fill="#ffffff"/><path d="M417.4 96H94.6C77.7 96 64 110.3 64 128s13.7 32 30.6 32h322.8c16.9 0 30.6-14.3 30.6-32s-13.7-32-30.6-32z" fill="#ffffff"/><path d="M417.4 352H94.6C77.7 352 64 366.3 64 384s13.7 32 30.6 32h322.8c16.9 0 30.6-14.3 30.6-32s-13.7-32-30.6-32z" fill="#ffffff"/></svg>
     </button>
-    <span *ngIf="!hiddensidebar_" class="hidden text-white md:flex" >FIRMA DIGITAL</span>
+    <span *ngIf="!hiddensidebar_" class="hidden text-tuna-50 md:flex" >FIRMA DIGITAL</span>
   </div>
   <!-- RUTAS -->
-  <button class="w-full px-3 py-2 rounded-lg hover:bg-gray-500">
+  <button class="w-full px-3 py-2 rounded-lg hover:bg-tuna-600">
     <a [routerLink]="['dashboard']" class="flex flex-row gap-2">
       <svg width="24" height="24" viewBox="0 0 24 24">
         <path fill="#ffffff"
           d="M4.308 10.5q-.344 0-.576-.232q-.232-.232-.232-.576V4.308q0-.344.232-.576q.232-.232.576-.232h5.384q.344 0 .576.232q.232.232.232.576v5.384q0 .344-.232.576q-.232.232-.576.232zm.192-6v5zm9.808 6q-.344 0-.576-.232q-.232-.232-.232-.576V4.308q0-.344.232-.576q.232-.232.576-.232h5.384q.344 0 .576.232q.232.232.232.576v5.384q0 .344-.232.576q-.232.232-.576.232zm.192-6v5zm-10.192 16q-.344 0-.576-.232q-.232-.232-.232-.576v-5.384q0-.344.232-.576q.232-.232.576-.232h5.384q.344 0 .576.232q.232.232.232.576v5.384q0 .344-.232.576q-.232.232-.576.232zm.192-6v5zm12.5 6q-.213 0-.357-.144q-.143-.143-.143-.356v-2.5h-2.525q-.194 0-.335-.144q-.14-.144-.14-.357t.144-.356q.144-.143.356-.143h2.5v-2.525q0-.194.144-.335q.144-.14.357-.14t.356.144q.143.144.143.356v2.5h2.525q.194 0 .335.144q.14.144.14.357t-.144.356q-.143.143-.356.143h-2.5v2.525q0 .194-.144.335q-.144.14-.357.14M14.5 4.5v5h5v-5zm-10 0v5h5v-5zm0 10v5h5v-5z" />
       </svg>
-      <span *ngIf="!hiddensidebar_" class="hidden text-white md:flex">Dashboard</span>
+      <span *ngIf="!hiddensidebar_" class="hidden text-tuna-50 md:flex">Dashboard</span>
     </a>
   </button>
-  <button class="w-full px-3 py-2 rounded-lg hover:bg-gray-500">
+  <button class="w-full px-3 py-2 rounded-lg hover:bg-tuna-600">
     <a [routerLink]="['sign-document']" class="flex flex-row gap-2">
       <svg width="24" height="24" viewBox="0 0 32 32"><path fill="#ffffff" d="M17 9V2H8a3 3 0 0 0-3 3v22a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3v-7.325l-5.905 5.857a4.29 4.29 0 0 1-1.953 1.11l-3.02.777A2.499 2.499 0 0 1 13.205 26H9a1 1 0 1 1 0-2h4.175l.694-2.68a4.158 4.158 0 0 1 1.073-1.886L22.316 12H20a3 3 0 0 1-3-3m9.69.499a4.38 4.38 0 0 0-2.106.501H20a1 1 0 0 1-1-1V2.117a3 3 0 0 1 1.293.762l5.828 5.828c.234.233.425.501.568.792m1.962 6.425l-8.613 8.543c-.352.35-.79.598-1.27.722l-3.02.777a1 1 0 0 1-1.218-1.22l.79-3.05c.119-.456.355-.872.687-1.206l8.57-8.64a2.88 2.88 0 1 1 4.074 4.074"/></svg>
-      <span *ngIf="!hiddensidebar_" class="hidden text-white md:flex">Firmar documentos</span>
+      <span *ngIf="!hiddensidebar_" class="hidden text-tuna-50 md:flex">Firmar documentos</span>
     </a>
   </button>
-  <button class="w-full px-3 py-2 rounded-lg hover:bg-gray-500">
-    <a [routerLink]="['sign-document']" class="flex flex-row gap-2">
+  <button class="w-full px-3 py-2 rounded-lg hover:bg-tuna-600">
+    <a [routerLink]="['management-document']" class="flex flex-row gap-2">
     <svg width="24" height="24" viewBox="0 0 16 16"><path fill="#ffffff" d="M8.8 0c.274 0 .537.113.726.312l3.2 3.428c.176.186.274.433.274.689V13a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1zM12 5H8.5a.5.5 0 0 1-.5-.5V1H2v12h10zm-7.5 6a.5.5 0 1 1 0-1h5a.5.5 0 1 1 0 1zm0-3a.5.5 0 0 1 0-1h5a.5.5 0 1 1 0 1zm1 8a.5.5 0 1 1 0-1H14V6.5a.5.5 0 1 1 1 0V15a1 1 0 0 1-1 1z"/></svg>
-    <span *ngIf="!hiddensidebar_" class="hidden text-white md:flex">Administrar documentos</span>
+    <span *ngIf="!hiddensidebar_" class="hidden text-tuna-50 md:flex">Administrar documentos</span>
   </a>
   </button>
-  <button class="w-full mt-auto px-3 py-2 rounded-lg hover:bg-gray-500">
+  <button class="w-full mt-auto px-3 py-2 rounded-lg hover:bg-tuna-600">
     <a [routerLink]="['sign-document']" class="flex flex-row gap-2">
       <svg width="24" height="24" viewBox="0 0 24 24"><path fill="#ffffff" d="M9.18 1h5.64l.647 3.237a8.493 8.493 0 0 1 1.52.88l3.129-1.059l2.82 4.884l-2.481 2.18a8.577 8.577 0 0 1 0 1.756l2.48 2.18l-2.819 4.884l-3.129-1.058a8.497 8.497 0 0 1-1.52.879L14.819 23H9.18l-.647-3.237a8.496 8.496 0 0 1-1.52-.88l-3.129 1.059l-2.82-4.884l2.481-2.18a8.587 8.587 0 0 1 0-1.756l-2.48-2.18l2.82-4.884l3.128 1.058a8.492 8.492 0 0 1 1.52-.879zm1.64 2l-.542 2.705l-.525.193a6.492 6.492 0 0 0-1.912 1.106l-.43.359l-2.615-.885l-1.18 2.044l2.072 1.821l-.095.551a6.55 6.55 0 0 0 0 2.212l.095.55l-2.073 1.822l1.18 2.044l2.616-.885l.43.359a6.52 6.52 0 0 0 1.912 1.106l.525.193L10.82 21h2.36l.542-2.705l.525-.193a6.494 6.494 0 0 0 1.912-1.106l.43-.359l2.616.885l1.18-2.044l-2.072-1.821l.094-.551a6.552 6.552 0 0 0 0-2.212l-.094-.55l2.072-1.822l-1.18-2.044l-2.616.885l-.43-.359a6.49 6.49 0 0 0-1.912-1.106l-.525-.193L13.18 3zM12 9a3 3 0 1 0 0 6a3 3 0 0 0 0-6m-5 3a5 5 0 1 1 10 0a5 5 0 0 1-10 0"/></svg>
-    <span *ngIf="!hiddensidebar_" class="hidden text-white md:flex">Configuración</span>
+    <span *ngIf="!hiddensidebar_" class="hidden text-tuna-50 md:flex">Configuración</span>
     </a>
   </button>
 </aside>

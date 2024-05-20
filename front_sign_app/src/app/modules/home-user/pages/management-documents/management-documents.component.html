@@ -1,0 +1,22 @@
+<section class="flex flex-col gap-4 justify-center p-4">
+  <article>
+    <div class="flex flex-col gap-4 ">
+      <h1 class="text-3xl text-white font-bold">Administrar documentos</h1>
+      <p class="text-base text-white font-light">En esta sección encontraras los documentos que has cargado y toda su información</p>
+    </div>
+  </article>
+  <article class="flex flex-row flex-grow gap-8">
+    <ng-container *ngFor="let documento of documentos">
+      <app-card [title]="documento.name" [parrafo]="documento.description">
+        <label class="py-2 text-sm text-gray-400">{{documento.updateDate}}</label>
+        <div class="flex flex-row gap-2 w-max">
+          <button class="flex flex-row gap-1 px-2 py-1 bg-red-600 rounded-lg text-tuna-50 hover:bg-red-700">
+            <span class="">Eliminar</span>
+          </button>
+          <button class="px-2 py-1 bg-indigo-600 rounded-lg text-tuna-50 hover:bg-indigo-700">Descargar</button>
+        </div>
+      </app-card>
+    </ng-container>
+  </article>
+</section>
+

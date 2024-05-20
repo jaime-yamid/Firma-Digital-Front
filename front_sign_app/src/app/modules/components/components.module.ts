@@ -3,20 +3,22 @@ import { CommonModule } from '@angular/common';
 import { ButtonComponent } from './component/button/button.component';
 import { InputTextComponent } from './component/input-text/input-text.component';
 import { CheckBoxComponent } from './component/check-box/check-box.component';
-import { CardsComponent } from './component/cards/cards.component';
 import { SideBarComponent } from './component/side-bar/side-bar.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputFileComponent } from './component/input-file/input-file.component';
+import { CardComponent } from './component/card/card.component';
+import { SearchInputComponent } from './component/search-input/search-input.component';
 
 @NgModule({
   declarations: [
     ButtonComponent,
     InputTextComponent,
     CheckBoxComponent,
-    CardsComponent,
     SideBarComponent,
-    InputFileComponent
+    InputFileComponent,
+    CardComponent,
+    SearchInputComponent
   ],
   imports: [
     CommonModule,
@@ -28,9 +30,9 @@ import { InputFileComponent } from './component/input-file/input-file.component'
     ButtonComponent,
     InputTextComponent,
     CheckBoxComponent,
-    CardsComponent,
     SideBarComponent,
-    InputFileComponent
+    InputFileComponent,
+    CardComponent
   ],
 })
 export class ComponentsModule { }

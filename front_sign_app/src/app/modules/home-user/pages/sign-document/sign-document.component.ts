@@ -31,7 +31,9 @@ export class SignDocumentComponent {
     }
   }
   onSubmit() {
-    this.signatureService.signFile(this.formData).subscribe(
+    console.log(this.signForm.get('file').value)
+    let formData = this.signForm.get('file').value
+    this.signatureService.signFile(formData).subscribe(
       (response) => {
         // Aquí manejas la respuesta del backend, por ejemplo:
         this.signedFile = response;

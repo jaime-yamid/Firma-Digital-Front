@@ -1,1 +1,39 @@
-<p>dashboard works!</p>
+<section class="flex flex-col gap-10 w-full px-10 py-5">
+
+  <div class="flex flex-row justify-between w-full mx-auto ">
+      <h1 class="text-tuna-50 text-3xl font-bold">Dashboard</h1>
+      <div class="flex flex-row gap-2">
+        <button class="flex flex-row gap-1 px-1 py-2 text-tuna-50 border rounded-md bg-emerald-600">
+          <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#ffffff" d="M11 20q-.425 0-.712-.288T10 19v-6L4.2 5.6q-.375-.5-.112-1.05T5 4h14q.65 0 .913.55T19.8 5.6L14 13v6q0 .425-.288.713T13 20z"/></svg>
+          <span>Filtros</span>
+        </button>
+      </div>
+  </div>
+  <article class="flex flex-row justify-between gap-5 p-4">
+    <!-- total de documentos -->
+    <app-card [title]="'Total documentos'" [parrafo]="'El total de documentos en tu cuenta'">
+      <div class="flex flex-row justify-around px-4">
+        <h1 class="text-6xl text-tuna-50">{{conteo}}</h1>
+        <svg width="64" height="64" viewBox="0 0 24 24"><path fill="#ffffff" d="M14 22v-3.075l5.525-5.5q.225-.225.5-.325t.55-.1q.3 0 .575.113t.5.337l.925.925q.2.225.313.5t.112.55t-.1.563t-.325.512l-5.5 5.5zm7.5-6.575l-.925-.925zm-6 5.075h.95l3.025-3.05l-.45-.475l-.475-.45l-3.05 3.025zM6 22q-.825 0-1.412-.587T4 20V4q0-.825.588-1.412T6 2h8l6 6v3h-2V9h-5V4H6v16h6v2zm13.025-5.025l-.475-.45l.925.925z"/></svg>
+      </div>
+    </app-card>
+
+    <!-- total de documentos elimandos -->
+    <app-card [title]="'Documentos eliminados'" [parrafo]="'El total de documentos eliminados de tu cuenta'">
+      <div class="flex flex-row justify-around px-4">
+        <h1 class="text-6xl text-tuna-50">{{conteo}}</h1>
+        <svg width="64" height="64" viewBox="0 0 24 24"><path fill="#ffffff" d="M7 21q-.825 0-1.412-.587T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.587 1.413T17 21zM17 6H7v13h10zM9 17h2V8H9zm4 0h2V8h-2zM7 6v13z"/></svg>
+      </div>
+    </app-card>
+
+    <!-- Almacenamiento usadp -->
+    <app-card [title]="'Almacenamiento usado'" [parrafo]="'El total de almacenamienot usado en tu cuenta'">
+      <div class="flex flex-row justify-around px-4">
+        <h1 class="text-6xl text-tuna-50">{{conteo}}</h1>
+        <svg width="64" height="64" viewBox="0 0 24 24"><path fill="#ffffff" d="M12 21q-3.775 0-6.387-1.162T3 17V7q0-1.65 2.638-2.825T12 3t6.363 1.175T21 7v10q0 1.675-2.613 2.838T12 21m0-11.975q2.225 0 4.475-.638T19 7.025q-.275-.725-2.512-1.375T12 5q-2.275 0-4.462.638T5 7.025q.35.75 2.538 1.375T12 9.025M12 14q1.05 0 2.025-.1t1.863-.288t1.675-.462T19 12.525v-3q-.65.35-1.437.625t-1.675.463t-1.863.287T12 11t-2.05-.1t-1.888-.288T6.4 10.15T5 9.525v3q.625.35 1.4.625t1.663.463t1.887.287T12 14m0 5q1.15 0 2.338-.175t2.187-.462t1.675-.65t.8-.738v-2.45q-.65.35-1.437.625t-1.675.463t-1.863.287T12 16t-2.05-.1t-1.888-.288T6.4 15.15T5 14.525V17q.125.375.788.725t1.662.638t2.2.462T12 19"/></svg>
+      </div>
+    </app-card>
+
+  </article>
+
+</section>

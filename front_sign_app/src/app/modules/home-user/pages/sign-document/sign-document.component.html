@@ -1,35 +1,25 @@
 
-<article class="flex flex-row justify-center items-center h-full">
-  <div class="flex flex-row justify-center items-center w-full h-screen backdrop-blur-sm bg-slate-500">
+<article class="flex flex-row justify-center items-center h-full text-tuna-50">
+  <div class="flex flex-col gap-2 justify-center items-center w-full h-screen backdrop-blur-sm">
     <!-- LOGIN -->
-    <div class="flex flex-col gap-5 items-center justify-center shadow-md w-full h-screen px-14 bg-gray-800 md:w-1/2 md:h-fit md:py-20 md:rounded-md md:max-w-96">
-      <div class="flex flex-col gap-3 w-full items-center">
-        <h2 class="text-2xl font-bold mb-4 text-white w-full">Cargar archivo</h2>
-        <div class="flex items-center w-full">
-          <span class="border-b border-gray-300 flex-grow"></span>
-          <span class="mx-3 text-gray-500"></span>
-          <span class="border-b border-gray-300 flex-grow"></span>
+    <div class="flex flex-col gap-5 p-4 items-center justify-center shadow-md w-full h-screen bg-tuna-800 md:h-fit md:rounded-md md:w-fit">
+
+      <div class="flex flex-col w-full items-center ">
+        <div class="border-2 border-tuna-100 border-dashed rounded-xl  p-24">
+          <div class="flex flex-col gap-3 items-center">
+            <svg width="50" height="50" viewBox="0 0 512 512"><path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M320 367.79h76c55 0 100-29.21 100-83.6s-53-81.47-96-83.6c-8.89-85.06-71-136.8-144-136.8c-69 0-113.44 45.79-128 91.2c-60 5.7-112 43.88-112 106.4s54 106.4 120 106.4h56"/><path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="m320 255.79l-64-64l-64 64m64 192.42V207.79"/></svg>
+            <form [formGroup]="signForm">
+              <app-input-file formControlName="file" [Label]="'Cargar archivos'"></app-input-file>
+
+            </form>
+          </div>
         </div>
       </div>
-      <div class="flex flex-col gap-3 w-full items-center text-white">
-        <form [formGroup]="signForm">
-          <div class="mb-4">
-            <app-input-file formControlName="file" [Label]="'Cargar archivos'"></app-input-file>
-            <input type="file" (change)="fileChange($event)" placeholder="Upload file">
-            <!-- <app-input-text formControlName="user" [Label]="'Correo electronico'" [placeholder]="'****@correo.com'" [type]="'email'"></app-input-text> -->
-          </div>
-          <div class="mb-4">
-           <app-button [buttonControl]="signForm" (click)="onSubmit()" >Ingresar</app-button>
-            <!-- <button class="bg-blue-600 text-white px-4 py-2 rounded-2xl font-normal w-full hover:bg-blue-500">Ingresar</button> -->
-          </div>
-          <div class="flex flex-row w-full justify-between">
-            <a [routerLink]="['dashboard']" class=""><span class="text-xs text-white text-opacity-70 hover:text-opacity-95">No tienes cuenta?</span></a>
-          </div>
-        </form>
 
-      </div>
     </div>
-
+    <div class="mb-4">
+      <app-button [buttonControl]="signForm" (click)="onSubmit()" >Firmar documento</app-button>
+     </div>
   </div>
 
 
