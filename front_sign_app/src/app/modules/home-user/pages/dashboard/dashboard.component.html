@@ -1,6 +1,6 @@
-<section class="flex flex-col gap-10 w-full px-10 py-5">
+<section class="flex flex-col gap-10 w-full px-10 py-5 overflow-y-auto h-screen">
 
-  <div class="flex flex-row justify-between w-full mx-auto ">
+  <div class="flex flex-row flex-wrap justify-between w-full mx-auto ">
       <h1 class="text-tuna-50 text-3xl font-bold">Dashboard</h1>
       <div class="flex flex-row gap-2">
         <button class="flex flex-row gap-1 px-1 py-2 text-tuna-50 border rounded-md bg-emerald-600">
@@ -9,7 +9,7 @@
         </button>
       </div>
   </div>
-  <article class="flex flex-row justify-between gap-5 p-4">
+  <article class="flex flex-row flex-wrap justify-between gap-5 p-4">
     <!-- total de documentos -->
     <app-card [title]="'Total documentos'" [parrafo]="'El total de documentos en tu cuenta'">
       <div class="flex flex-row justify-around px-4">
