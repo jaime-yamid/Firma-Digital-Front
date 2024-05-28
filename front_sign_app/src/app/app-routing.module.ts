@@ -8,10 +8,12 @@ import { SignDocumentComponent } from './modules/home-user/pages/sign-document/s
 import { DashboardComponent } from './modules/home-user/pages/dashboard/dashboard.component';
 import { ManagementDocumentsComponent } from './modules/home-user/pages/management-documents/management-documents.component';
 import { SettingComponent } from './modules/home-user/pages/setting/setting.component';
+import { SignUpComponent } from './modules/authentication/pages/sign-up/sign-up.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignUpComponent },
   { path: 'home', component: HomeComponent,
   children: [
     {path: "dashboard", component: DashboardComponent},

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators, } from '@angular/forms';
 import { Router,ActivatedRoute } from '@angular/router';
+import { LoginService } from 'src/app/services/auth/login.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,6 +14,7 @@ export class LoginComponent {
 
   constructor(
     private fb: FormBuilder,
+    private authServices:LoginService,
     private _Activatedroute:ActivatedRoute,
     private _router:Router) {
     this.formLogin = this.fb.group({
@@ -26,5 +28,19 @@ export class LoginComponent {
     const passwordValue = this.formLogin.get('pass').value;
     console.log('Usuario:', userValue);
     console.log('Contraseña:', passwordValue);
+    const data = {
+      user:userValue,
+      pass:passwordValue,
+    }
+    this.authServices.login(data).subscribe(
+      (response) => {
+        // Aquí manejas la respuesta del backend, por ejemplo:
+        console.log('INGRESO:', response);
+
+      },
+      (error) => {
+        console.error('Error al ingresar:', error);
+      }
+    );
   }
 }

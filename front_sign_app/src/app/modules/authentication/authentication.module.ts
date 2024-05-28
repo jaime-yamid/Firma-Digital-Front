@@ -5,13 +5,15 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { ComponentsModule } from '../components/components.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { RecoveryPassComponent } from './pages/recovery-pass/recovery-pass.component';
 
 
 
 @NgModule({
   declarations: [
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    RecoveryPassComponent
   ],
   imports: [
     CommonModule,
