@@ -7,7 +7,8 @@ describe('LoginService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(LoginService);
+    service = TestBed.inject(LoginService);}
+    
   });
 
   it('should be created', () => {
