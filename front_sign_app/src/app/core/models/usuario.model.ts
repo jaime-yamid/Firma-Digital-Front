@@ -5,7 +5,7 @@ export class UsuarioModel {
         public email:String,
         public tipoDocumento:String,
         public numeroDocumento:number,
-        public  login:String,
+        public  user:String,
         public password:String,
         public rol:String,
         public estaod:boolean,

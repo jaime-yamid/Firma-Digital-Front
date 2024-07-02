@@ -17,7 +17,7 @@
     <div class="flex flex-col gap-3 w-full items-center text-white">
       <form [formGroup]="loginForm"(submit)="realizarlogin()">
         <div class="mb-4">
-          <app-input-text formControlName="login" [Label]="'Correo electronico'" [placeholder]="'****@correo.com'" [type]="'email'"></app-input-text>
+          <app-input-text formControlName="user" [Label]="'Correo electronico'" [placeholder]="'****@correo.com'" [type]="'email'"></app-input-text>
         </div>
 
         <div class="mb-4">

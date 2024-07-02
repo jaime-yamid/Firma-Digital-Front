@@ -26,7 +26,7 @@ formLogin: any;
 
       // aqui digo en donde el campo de validatos que con un correo se autentica 
       this.loginForm = this.formBuilder.group({
-        login:['',[Validators.required, Validators.email]],
+        user:['',[Validators.required, Validators.email]],
         password:['',[Validators.required, Validators.minLength(5)]],
       });
   
@@ -34,8 +34,8 @@ formLogin: any;
  
 
 
-  get login(){
-    return this.loginForm.get('login');
+  get user(){
+    return this.loginForm.get('user');
   
   }
 get password(){
