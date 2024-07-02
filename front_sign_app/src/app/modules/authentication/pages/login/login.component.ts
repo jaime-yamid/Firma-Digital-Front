@@ -1,46 +1,74 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validators, } from '@angular/forms';
-import { Router,ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, } from '@angular/forms';
+import { Router} from '@angular/router';
 import { LoginService } from 'src/app/services/auth/login.service';
+import { AutenticacionService } from 'src/app/services/auth/autenticacion/autenticacion.service';
+import Swal from 'sweetalert2'
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
 
-  formLogin: FormGroup;
-  userFormControl: FormControl;
+  loginForm!: FormGroup;
+  router:any;
+formLogin: any;
 
   constructor(
-    private fb: FormBuilder,
-    private authServices:LoginService,
-    private _Activatedroute:ActivatedRoute,
-    private _router:Router) {
-    this.formLogin = this.fb.group({
-      user: ['',[Validators.required,Validators.email]],
-      pass: ['',[Validators.required,Validators.minLength(5)]]
-    });
-  }
+    private formBuilder: FormBuilder,
+    private autenticacionservice: AutenticacionService,
+    private aService : AutenticacionService,
+    private ruta:Router) { }
 
-  onSubmit() {
-    const userValue = this.formLogin.get('user').value;
-    const passwordValue = this.formLogin.get('pass').value;
-    console.log('Usuario:', userValue);
-    console.log('Contraseña:', passwordValue);
-    const data = {
-      user:userValue,
-      pass:passwordValue,
+
+    ngOnInit(): void {
+
+      // aqui digo en donde el campo de validatos que con un correo se autentica 
+      this.loginForm = this.formBuilder.group({
+        login:['',[Validators.required, Validators.email]],
+        password:['',[Validators.required, Validators.minLength(5)]],
+      });
+  
     }
-    this.authServices.login(data).subscribe(
-      (response) => {
-        // Aquí manejas la respuesta del backend, por ejemplo:
-        console.log('INGRESO:', response);
+ 
 
-      },
-      (error) => {
-        console.error('Error al ingresar:', error);
-      }
-    );
+
+  get login(){
+    return this.loginForm.get('login');
+  
   }
+get password(){
+  return this.loginForm.get('password');
 }
+  realizarlogin(){
+    if(this.loginForm.invalid){
+      return;
+    
+    }
+    // agarro la informacion la envio en la data es la constante 
+      const data=this.loginForm.value;
+    
+    
+    this.autenticacionservice.login(data).subscribe({
+      next:(resp: any) => {
+        if ( resp && resp.usuario){
+          const {nombre,login,email} =  resp.usuario;
+          Swal.fire({
+            html: `Bienvenido ${nombre}`,
+          }).then(()=> {
+            this.ruta.navigateByUrl('home/dashboard');        
+          });
+          }
+        },
+        error:(error: any) => {
+          console.error(error.error.msg);
+        }
+      });
+    }
+    
+
+
+ 
+}
+
