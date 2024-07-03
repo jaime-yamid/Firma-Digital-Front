@@ -15,17 +15,17 @@
       </div>
     </div>
     <div class="flex flex-col gap-3 w-full items-center text-white">
-      <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+      <form [formGroup]="loginForm"(submit)="realizarlogin()">
         <div class="mb-4">
           <app-input-text formControlName="user" [Label]="'Correo electronico'" [placeholder]="'****@correo.com'" [type]="'email'"></app-input-text>
         </div>
 
         <div class="mb-4">
-          <app-input-text formControlName="pass" [Label]="'Contraseña'" [placeholder]="'******'" [type]="'password'"></app-input-text>
+          <app-input-text formControlName="password" [Label]="'Contraseña'" [placeholder]="'******'" [type]="'password'"></app-input-text>
           <a [routerLink]="['dashboard']" class="text-xs"><span class="text-white text-opacity-70 hover:text-opacity-95">Olvidaste la contraseña?</span></a>
         </div>
         <div class="mb-4">
-         <app-button [buttonControl]="formLogin" (click)="onSubmit()">Ingresar</app-button>
+         <app-button [buttonControl]="!loginForm.valid" (click)="realizarlogin()">Ingresar</app-button>
         </div>
         <div class="flex flex-row w-full justify-between">
           <a [routerLink]="['dashboard']" class=""><span class="text-xs text-white text-opacity-70 hover:text-opacity-95">No tienes cuenta?</span></a>
