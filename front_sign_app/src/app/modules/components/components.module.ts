@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputFileComponent } from './component/input-file/input-file.component';
 import { CardComponent } from './component/card/card.component';
 import { SearchInputComponent } from './component/search-input/search-input.component';
+import { ToolTipComponent } from './component/tool-tip/tool-tip.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SearchInputComponent } from './component/search-input/search-input.comp
     SideBarComponent,
     InputFileComponent,
     CardComponent,
-    SearchInputComponent
+    SearchInputComponent,
+    ToolTipComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +34,8 @@ import { SearchInputComponent } from './component/search-input/search-input.comp
     CheckBoxComponent,
     SideBarComponent,
     InputFileComponent,
-    CardComponent
+    CardComponent,
+    ToolTipComponent
   ],
 })
 export class ComponentsModule { }
