@@ -11,9 +11,11 @@ import { AutenticacionService } from 'src/app/services/auth/autenticacion/autent
 export class LoginComponent implements OnInit {
 
   loginForm!: FormGroup;
-  // router:any;
-formLogin: any;
-
+  formLogin: any;
+  //USER NAME
+  username :String = ""
+  //ALERTA
+  titleAlert :String = `Bienvenido ${this.username} !`
   constructor(
     private formBuilder: FormBuilder,
     private autenticacionservice: AutenticacionService,
@@ -29,15 +31,6 @@ formLogin: any;
       });
 
     }
-
-
-
-  // get user(){
-  //   return this.loginForm.get('user');
-  // }
-  // get password(){
-  //   return this.loginForm.get('password');
-  // }
   login(){
     if(this.loginForm.invalid){
       return;
@@ -48,6 +41,8 @@ formLogin: any;
     this.autenticacionservice.login(data).subscribe(
       (response:any)=>{
         console.log(response)
+        this.username = response.usuario
+        this.titleAlert = `Bienvenido ${this.username} !`
         this.router.navigateByUrl('home/dashboard');
       },
       (err:any) =>{
@@ -56,4 +51,3 @@ formLogin: any;
     );
     }
 }
-

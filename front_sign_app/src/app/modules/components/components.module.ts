@@ -10,6 +10,7 @@ import { InputFileComponent } from './component/input-file/input-file.component'
 import { CardComponent } from './component/card/card.component';
 import { SearchInputComponent } from './component/search-input/search-input.component';
 import { ToolTipComponent } from './component/tool-tip/tool-tip.component';
+import { AlertsComponent } from './component/alerts/alerts.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ToolTipComponent } from './component/tool-tip/tool-tip.component';
     InputFileComponent,
     CardComponent,
     SearchInputComponent,
-    ToolTipComponent
+    ToolTipComponent,
+    AlertsComponent
   ],
   imports: [
     CommonModule,
@@ -35,7 +37,8 @@ import { ToolTipComponent } from './component/tool-tip/tool-tip.component';
     SideBarComponent,
     InputFileComponent,
     CardComponent,
-    ToolTipComponent
+    ToolTipComponent,
+    AlertsComponent
   ],
 })
 export class ComponentsModule { }

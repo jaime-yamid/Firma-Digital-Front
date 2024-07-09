@@ -19,7 +19,6 @@
         <div class="mb-4">
           <app-input-text formControlName="user" [Label]="'Correo electronico'" [placeholder]="'****@correo.com'" [type]="'email'"></app-input-text>
         </div>
-
         <div class="mb-4">
           <app-input-text formControlName="password" [Label]="'Contraseña'" [placeholder]="'******'" [type]="'password'"></app-input-text>
           <a [routerLink]="['dashboard']" class="text-xs"><span class="text-white text-opacity-70 hover:text-opacity-95">Olvidaste la contraseña?</span></a>
@@ -31,9 +30,9 @@
           <a [routerLink]="['dashboard']" class=""><span class="text-xs text-white text-opacity-70 hover:text-opacity-95">No tienes cuenta?</span></a>
         </div>
       </form>
-
     </div>
   </div>
-
 </div>
+<app-alerts [title]="this.titleAlert" [description]="'Haz ingresado correctamente, ahora podras administrar tus documentos y firmarlos a tu gusto'"></app-alerts>
 
+'
