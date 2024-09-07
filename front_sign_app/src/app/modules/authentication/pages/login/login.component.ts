@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   //USER NAME
   username :String = ""
   //ALERTA
+  openAlert:boolean = false
   titleAlert :String = `Bienvenido ${this.username} !`
   constructor(
     private formBuilder: FormBuilder,
@@ -23,7 +24,6 @@ export class LoginComponent implements OnInit {
 
 
     ngOnInit(): void {
-
       // aqui digo en donde el campo de validatos que con un correo se autentica
       this.loginForm = this.formBuilder.group({
         user:['',[Validators.required, Validators.email]],
@@ -42,11 +42,13 @@ export class LoginComponent implements OnInit {
       (response:any)=>{
         console.log(response)
         this.username = response.usuario
+        this.openAlert = true
         this.titleAlert = `Bienvenido ${this.username} !`
         this.router.navigateByUrl('home/dashboard');
       },
       (err:any) =>{
         console.error(err)
+        this.openAlert = true
       }
     );
     }

@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./alerts.component.css']
 })
 export class AlertsComponent {
-
+  @Input() open:boolean = false
   @Input() title:String = ""
   @Input() description:String = ""
 
